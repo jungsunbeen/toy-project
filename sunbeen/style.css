@@ -134,6 +134,12 @@ button:hover {
     grid-template-columns: 1fr;
     width: 60%;
   }
+  #user-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
 }
 
 #entry {
