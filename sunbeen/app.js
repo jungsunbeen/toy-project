@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', getData);
 
 writeBtn.addEventListener('click', function() {
     const authorInput = document.querySelector("#user-container input[type='text'][placeholder='작성자']");
-    const passwordInput = document.querySelector("#user-container input[type='text'][placeholder='비밀번호']");
+    const passwordInput = document.querySelector("#user-container input[type='password'][placeholder='비밀번호']");
     const titleInput = document.querySelector("#write-container input[type='text'][placeholder='제목']");
     const contentInput = document.querySelector("#write-container input[type='text'][placeholder='내용을 입력하세요']");
 
