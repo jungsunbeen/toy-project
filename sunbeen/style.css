@@ -69,6 +69,7 @@ button:hover {
 
 #write-container input[type="text"][placeholder="제목"] {
   width: 430px;
+  height: 22px;
   margin-bottom: 10px;
   padding: 5px;
 }
@@ -128,7 +129,7 @@ button:hover {
     font-size: 14px;
   }
   #write-container input[type="text"][placeholder="내용을 입력하세요"] {
-    width: 53%;
+    width: 50%;
     height: 1rem;
     font-size: 14px;
   }
