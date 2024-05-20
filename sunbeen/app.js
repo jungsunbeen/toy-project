@@ -3,16 +3,9 @@ const listContainer = document.getElementById('list');
 const writeBtn = document.getElementById('write-btn');
 
 const getData = async () => {
-    try {
-        const response = await fetch(baseURL);
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        const data = await response.json();
-        displayData(data);
-    } catch (error) {
-        console.error('Error fetching data:', error);
-    }
+    const response = await fetch(baseURL);
+    const data = await response.json();
+    displayData(data);
 };
 
 const displayData = (data) => {
