@@ -121,10 +121,12 @@ button:hover {
   }
 
   #write-container input[type="text"][placeholder="제목"] {
+    width: 85%;
     font-size: 14px;
   }
   #write-container input[type="text"][placeholder="내용을 입력하세요"] {
-    height: 8px;
+    width: 50%;
+    height: 5px;
     font-size: 14px;
   }
   #list {
