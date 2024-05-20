@@ -116,6 +116,9 @@ button:hover {
 }
 
 @media (max-width: 767px) {
+  h1 {
+    font-size: 20px;
+  }
   #list {
     grid-template-columns: 1fr;
   }
