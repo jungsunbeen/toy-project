@@ -129,13 +129,9 @@ button:hover {
   }
 
   #write-container input[type="text"][placeholder="내용을 입력하세요"] {
-    width: 80%;
+    width: 74%;
     padding: 20px;
     font-size: 14px;
-  }
-
-  #titleinentry {
-    font-size: 20px;
   }
 }
 
