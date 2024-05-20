@@ -135,10 +135,11 @@ button:hover {
     gap: 10px;
     text-align: center;
   }
-  #entry {
-    width: 100%;
-    font-size: 10px;
-    box-sizing: border-box;
+  #entry {  
+    padding: 0px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   
 }
