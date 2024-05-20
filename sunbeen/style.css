@@ -119,9 +119,6 @@ button:hover {
   h1 {
     font-size: 20px;
   }
-  #list {
-    grid-template-columns: 1fr;
-  }
 
   #write-container input[type="text"][placeholder="제목"] {
     width: 80%;
@@ -132,6 +129,10 @@ button:hover {
     width: 74%;
     padding: 20px;
     font-size: 14px;
+  }
+  #list {
+    grid-template-columns: 1fr;
+    width: 60%;
   }
 }
 
