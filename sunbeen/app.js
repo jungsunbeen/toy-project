@@ -1,10 +1,14 @@
-const baseURL = "http://lionguest.p-e.kr:8000/guestbook/";
+const baseUrl = "http://lionguest.p-e.kr:8000/guestbook/";
 const listContainer = document.getElementById('list');
 const writeBtn = document.getElementById('write-btn');
 
 const getData = async () => {
-    const response = await fetch(baseURL);
-    const data = await response.json();
+    const fetchData = await fetch(baseUrl);
+    console.log(fetchData);
+    const toJson = await fetchData.json();
+    console.log(toJson);
+    const datas = await toJson.response.body.items.item;
+    console.log(datas);
     displayData(data);
 };
 
@@ -69,7 +73,7 @@ writeBtn.addEventListener('click', function() {
 });
 
 const postData = async (entry) => {
-    const response = await fetch(baseURL, {
+    const response = await fetch(baseUrl, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
