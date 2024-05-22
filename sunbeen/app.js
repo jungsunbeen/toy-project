@@ -1,4 +1,4 @@
-const baseUrl = "http://lionguest.p-e.kr:8000/guestbook";
+const baseUrl = "https://lionguest.p-e.kr/guestbook/";
 const listContainer = document.getElementById('list');
 const writeBtn = document.getElementById('write-btn');
 
