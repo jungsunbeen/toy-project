@@ -1,4 +1,4 @@
-const baseUrl = "http://lionguest.p-e.kr:8000/guestbook/";
+const baseUrl = "http://lionguest.p-e.kr:8000/guestbook";
 const listContainer = document.getElementById('list');
 const writeBtn = document.getElementById('write-btn');
 
@@ -9,11 +9,11 @@ const getData = async () => {
     console.log(toJson);
     const datas = await toJson.response.body.items.item;
     console.log(datas);
-    displayData(data);
+    displayData(datas);
 };
 
 const displayData = (data) => {
-    listContainer.innerHTML = ''; // Clear previous entries
+    listContainer.innerHTML = '';
     data.forEach(entryData => {
         const entry = document.createElement("div");
         entry.classList.add("entry");
@@ -33,8 +33,7 @@ const displayData = (data) => {
             const passwordField = entry.querySelector("input[type='password']");
             const inputPassword = passwordField.value;
             // 여기서 비밀번호 확인 로직을 구현하고, 맞다면 entry를 삭제합니다.
-            if (inputPassword === entryData.password) { // Assuming password is part of entryData
-                entry.remove();
+            if (inputPassword === entryData.password) {
             } else {
                 alert("비밀번호가 일치하지 않습니다.");
             }
@@ -67,8 +66,6 @@ writeBtn.addEventListener('click', function() {
         password: password,
         created_at: new Date().toLocaleDateString()
     };
-
-    // Optionally, post the new entry to the server
     postData(newEntry);
 });
 
@@ -85,6 +82,7 @@ const postData = async (entry) => {
     }
     const result = await response.json();
     console.log('Entry successfully posted:', result);
+    getData();
 };
 
 // Call getData when the page loads
