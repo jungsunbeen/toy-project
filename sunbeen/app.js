@@ -35,7 +35,6 @@ const displayData = (data) => {
             const inputPassword = passwordField.value;
             if (inputPassword === data.password) {
                 console.log('Entry deleted:', entryData);
-                // delete api 추가해야됨
             } else {
                 alert("비밀번호가 일치하지 않습니다.");
             }

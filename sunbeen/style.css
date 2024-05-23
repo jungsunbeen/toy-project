@@ -142,13 +142,17 @@ button:hover {
     gap: 10px;
     text-align: center;
   }
-  #entry {  
+  #entry {
+    height: 200px;
+    font-size: 10px;
     padding: 0px;
     margin-bottom: 0px;
     padding-left: 0px;
     padding-right: 0px;
   }
-  
+  #titleinentry {
+    font-size: 10px;
+  }
 }
 
 #entry {
