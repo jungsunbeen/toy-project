@@ -1,4 +1,4 @@
-const baseUrl = "https://lionguest.p-e.kr/guestbook/";
+const baseUrl = "https://lionguest.p-e.kr";
 const listContainer = document.getElementById('list');
 const writeBtn = document.getElementById('write-btn');
 
@@ -85,5 +85,5 @@ const postData = async (entry) => {
     getData();
 };
 
-// Call getData when the page loads
+// 로드될 때 불러옴
 window.onload = getData;

@@ -53,6 +53,9 @@ button:hover {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  background-color: rgb(245, 245, 245,0.5);
+  padding: 10px;
+  border-radius: 10px;
 }
 
 #write-container input[type="text"] {
