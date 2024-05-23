@@ -33,11 +33,14 @@ const displayData = (data) => {
     deleteBtn.addEventListener("click", function() {
         const passwordField = entry.querySelector("input[type='password']");
         const inputPassword = passwordField.value;
-        if (inputPassword === data.password) {
+        if (inputPassword === `${data.password}`) {
             console.log('Entry deleted:', entryData);
+            deleteData(`${data}`,`${data.id}`);
         } else {
             alert("비밀번호가 일치하지 않습니다.");
+            passwordField.value = "";
         }
+
     });
 
     //방명록에 추가 (역순으로)
@@ -82,6 +85,20 @@ const postData = async (entry) => {
         getData();
         index.js에서 추가하기 때문에 불러올 필요 없음
         */
+    } catch (error) {
+        console.error(error);
+    }
+};
+
+const deleteData = async (data, id) => {
+    try {
+        const response = await fetch(baseUrl + id, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
     } catch (error) {
         console.error(error);
     }
