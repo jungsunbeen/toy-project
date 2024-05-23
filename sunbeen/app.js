@@ -28,20 +28,20 @@ const displayData = (data) => {
         </div>
     `;
         
-        // 삭제 버튼 이벤트 리스너 추가
-        const deleteBtn = entry.querySelector(".delete-btn");
-        deleteBtn.addEventListener("click", function() {
-            const passwordField = entry.querySelector("input[type='password']");
-            const inputPassword = passwordField.value;
-            if (inputPassword === data.password) {
-                console.log('Entry deleted:', entryData);
-            } else {
-                alert("비밀번호가 일치하지 않습니다.");
-            }
-        });
+    // 삭제 버튼 이벤트 리스너 추가
+    const deleteBtn = entry.querySelector(".delete-btn");
+    deleteBtn.addEventListener("click", function() {
+        const passwordField = entry.querySelector("input[type='password']");
+        const inputPassword = passwordField.value;
+        if (inputPassword === data.password) {
+            console.log('Entry deleted:', entryData);
+        } else {
+            alert("비밀번호가 일치하지 않습니다.");
+        }
+    });
 
-        // 방명록에 추가 (역순으로)
-        listContainer.insertBefore(entry, listContainer.firstChild);
+    //방명록에 추가 (역순으로)
+    listContainer.insertBefore(entry, listContainer.firstChildElementChild);
 };
 
 //document.addEventListener('DOMContentLoaded', getData);
