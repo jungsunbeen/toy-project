@@ -23,7 +23,7 @@ const displayData = (data) => {
         <p id="contentinentry">${data.content}</p>
         <p id="infoinentry">${data.writer} <br> ${new Date(data.created_at).toLocaleString()}</p>
         <div style="text-align: center;">
-            <input type="password" placeholder="비밀번호를 입력하세요">
+            <input type="password" placeholder="비밀번호">
             <button class="delete-btn">삭제</button>
         </div>
     `;

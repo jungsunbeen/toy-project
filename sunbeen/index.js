@@ -27,7 +27,7 @@ writeBtn.addEventListener("click", function() {
         <p id="contentinentry">${content}</p>
         <p id="infoinentry">${author} <br>  ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}</p>
         <div style="text-align: center;">
-            <input type="password" placeholder="비밀번호를 입력하세요">
+            <input type="password" placeholder="비밀번호">
             <button class="delete-btn">삭제</button>
         </div>
     `;

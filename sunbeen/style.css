@@ -144,7 +144,7 @@ button:hover {
   }
   #entry {
     height: 200px;
-    font-size: 10px;
+    font-size: 12px;
     padding: 0px;
     margin-bottom: 0px;
     padding-left: 0px;
@@ -181,4 +181,9 @@ button:hover {
 
 #infoinentry {
   text-align: right;
+}
+
+#entry input[type="password"][placeholder="비밀번호"] {
+  width: 20%;
+  text-align: center;
 }
