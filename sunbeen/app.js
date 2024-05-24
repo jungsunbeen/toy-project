@@ -33,14 +33,7 @@ const displayData = (data) => {
     deleteBtn.addEventListener("click", function() {
         const passwordField = entry.querySelector("input[type='password']");
         const inputPassword = passwordField.value;
-        if (inputPassword === `${data.password}`) {
-            console.log('Entry deleted:', entryData);
-            deleteData(`${data}`,`${data.id}`);
-        } else {
-            alert("비밀번호가 일치하지 않습니다.");
-            passwordField.value = "";
-        }
-
+        deleteData(inputPassword,`${data.id}`)
     });
 
     //방명록에 추가 (역순으로)
@@ -92,8 +85,8 @@ const postData = async (entry) => {
 
 const deleteData = async (data, id) => {
     try {
-        const response = await fetch(baseUrl + id, {
-            method: 'DELETE',
+        const response = await fetch(baseUrl+id, {
+            method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
