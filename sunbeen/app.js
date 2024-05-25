@@ -72,6 +72,10 @@ writeBtn.addEventListener('click', function() {
     };
     if (author.length <= 10 && password.length <= 10 && title.length <= 20) {
         postData(newEntry);
+        authorInput.value = "";
+        passwordInput.value = "";
+        titleInput.value = "";
+        contentInput.value = "";
     } else {
         if (author.length > 10) {
             alert("작성자명은 10자 이내로 작성하세요.");
