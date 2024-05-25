@@ -98,7 +98,6 @@ const deleteData = async (inputPasswordBody,id) => {
         } else {
             console.error('삭제 실패:', response.statusText);
             alert("비밀번호가 일치하지 않습니다.");
-            passwordField.value = "";
         }
     } catch (error) {
         console.error(error);
