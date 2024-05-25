@@ -56,7 +56,7 @@ writeBtn.addEventListener('click', function() {
     const password = passwordInput.value;
     const title = titleInput.value;
     const content = contentInput.value;
-    
+
     //새로운 방명록
     const newEntry = {
         writer: author,
@@ -68,6 +68,8 @@ writeBtn.addEventListener('click', function() {
 
     if (!author || !password || !title || !content) {
         alert("모든 항목을 작성해주세요.");
+    }
+    else{
         if (author.length <= 10 && password.length <= 10 && title.length <= 20) {
             postData(newEntry);
             authorInput.value = "";
