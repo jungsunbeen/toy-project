@@ -56,11 +56,7 @@ writeBtn.addEventListener('click', function() {
     const password = passwordInput.value;
     const title = titleInput.value;
     const content = contentInput.value;
-
-    if (!author || !password || !title || !content) {
-        alert("모든 항목을 작성해주세요.");
-    }
-
+    
     //새로운 방명록
     const newEntry = {
         writer: author,
@@ -69,22 +65,26 @@ writeBtn.addEventListener('click', function() {
         password: password,
         created_at: new Date().toISOString()
     };
-    if (author.length <= 10 && password.length <= 10 && title.length <= 20) {
-        postData(newEntry);
-        authorInput.value = "";
-        passwordInput.value = "";
-        titleInput.value = "";
-        contentInput.value = "";
-    } else {
-        if (author.length > 10) {
-            alert("작성자명은 10자 이내로 작성하세요.");
-        }
-        if (password.length > 10) {
-            alert("비밀번호는 10자 이내로 작성하세요.");        
+
+    if (!author || !password || !title || !content) {
+        alert("모든 항목을 작성해주세요.");
+        if (author.length <= 10 && password.length <= 10 && title.length <= 20) {
+            postData(newEntry);
+            authorInput.value = "";
             passwordInput.value = "";
-        }
-        if (title.length > 20) {
-            alert("제목은 20자 이내로 작성하세요.");
+            titleInput.value = "";
+            contentInput.value = "";
+        } else {
+            if (author.length > 10) {
+                alert("작성자명은 10자 이내로 작성하세요.");
+            }
+            if (password.length > 10) {
+                alert("비밀번호는 10자 이내로 작성하세요.");        
+                passwordInput.value = "";
+            }
+            if (title.length > 20) {
+                alert("제목은 20자 이내로 작성하세요.");
+            }
         }
     }
 });
