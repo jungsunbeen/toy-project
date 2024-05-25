@@ -59,7 +59,6 @@ writeBtn.addEventListener('click', function() {
 
     if (!author || !password || !title || !content) {
         alert("모든 항목을 작성해주세요.");
-        return; // 함수 종료
     }
 
     //새로운 방명록
@@ -81,7 +80,8 @@ writeBtn.addEventListener('click', function() {
             alert("작성자명은 10자 이내로 작성하세요.");
         }
         if (password.length > 10) {
-            alert("비밀번호는 10자 이내로 작성하세요.");
+            alert("비밀번호는 10자 이내로 작성하세요.");        
+            passwordInput.value = "";
         }
         if (title.length > 20) {
             alert("제목은 20자 이내로 작성하세요.");
